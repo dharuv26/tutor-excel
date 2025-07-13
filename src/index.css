@@ -1,0 +1,175 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito-Sans:wght@400;500;600;700;800&display=swap');
+
+/* Define brand colors as CSS variables */
+:root {
+  --primary-blue: #22A3D2;
+  --primary-orange: #FF9E10;
+  --light-gray: #F3F5F5;
+  --dark-navy: #0F2A47;
+  --almost-black: #070709;
+  --teal-green: #05AC8F;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+/* Custom Bootstrap Button Variants */
+.btn-primary-orange {
+  background-color: var(--primary-orange);
+  border-color: var(--primary-orange);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  transition: transform 0.2s;
+}
+.btn-primary-orange:hover {
+  background-color: #e68e0e;
+  border-color: #e68e0e;
+  color: white;
+  transform: scale(1.05);
+}
+
+.btn-secondary-blue {
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  transition: transform 0.2s;
+}
+.btn-secondary-blue:hover {
+  background-color: #1e92bb;
+  border-color: #1e92bb;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Custom Text Colors */
+.text-dark-navy { color: var(--dark-navy) !important; }
+.text-primary-orange { color: var(--primary-orange) !important; }
+.text-primary-blue { color: var(--primary-blue) !important; }
+
+/* Custom Background Colors */
+.bg-light-gray { background-color: var(--light-gray); }
+.bg-almost-black { background-color: var(--almost-black); }
+.bg-primary-orange-gradient { background: linear-gradient(to right, #FF9E10, #ffb74e); }
+
+/* General Styling */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--dark-navy);
+  font-weight: 700;
+}
+
+/* Find and replace or add this class */
+.hero-section-bg {
+  /* This gradient goes from light blue, to white, to light orange */
+  background: linear-gradient(to right, #CDF2FF, #FFE8C7);
+}
+
+/* Add this new class for the styled feature pointers */
+.feature-item {
+  background-color: #F3F5F5; /* The light gray background */
+  padding: 0.6rem 1.25rem;
+  border-radius: 50px;       /* This creates the pill shape */
+  color: var(--dark-navy);
+  font-weight: 500;
+  display: inline-flex;      /* Ensures the background fits the content */
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Add this new class for the section with the wavy orange background */
+.why-trust-section {
+  background-color: var(--primary-orange);
+  background-image: url('./assets/wavy-orange-bg.png'); /* Path to your new background image */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Add this class for the testimonial card's speech bubble tail */
+.testimonial-card {
+  position: relative; /* Required for the pseudo-element positioning */
+  background-color: var(--primary-blue);
+  border: none;
+  padding: 2rem;
+  border-radius: 20px;
+  color: white;
+}
+
+/* The ::after pseudo-element creates the triangle/tail */
+.testimonial-card::after {
+  content: '';
+  position: absolute;
+  bottom: -20px; /* Position it at the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 20px 20px 0 20px;
+  border-style: solid;
+  border-color: var(--primary-blue) transparent transparent transparent;
+}
+
+/* Add this new class for the white CTA button */
+.btn-white-custom {
+  background-color: white;
+  color: var(--primary-orange);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  border: 2px solid white; /* Optional: adds thickness */
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn-white-custom:hover {
+  background-color: #fff8f0; /* A very light orange for hover */
+  color: var(--primary-orange);
+  transform: scale(1.05);
+}
+
+/* Custom styles for the footer */
+.footer-section {
+  padding-top: 80px; /* Use a larger padding for better aesthetics */
+  padding-bottom: 30px;
+}
+
+/* Custom bullet points for the subjects list */
+.footer-subjects-list {
+  list-style: none;
+  padding-left: 0;
+}
+.footer-subjects-list li {
+  padding-left: 1.2rem;
+  position: relative;
+}
+.footer-subjects-list li::before {
+  content: '•';
+  color: var(--primary-orange);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Custom styles for the subscribe form */
+.subscribe-input {
+  border-radius: 50px !important;
+  padding: 0.75rem 1.25rem !important;
+  border: none !important;
+}
+
+.subscribe-button {
+  border-radius: 50px !important;
+  background-color: var(--primary-orange) !important;
+  border-color: var(--primary-orange) !important;
+  font-weight: 600 !important;
+  padding: 0.75rem 1.5rem !important;
+  transition: transform 0.2s;
+}
+
+.subscribe-button:hover {
+  transform: scale(1.05);
+}
