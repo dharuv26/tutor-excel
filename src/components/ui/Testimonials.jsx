@@ -2,9 +2,9 @@
 
 import React from 'react';
 import { Container, Row, Col, Card, Image } from 'react-bootstrap';
-import avatarPriya from '../assets/avatar-priya.png';
-import avatarRohit from '../assets/avatar-rohit.png';
-import stars5 from '../assets/stars-5.png'; // 1. Import the 5-star image
+import avatarPriya from '../../assets/images/avatar-priya.png';
+import avatarRohit from '../../assets/images/avatar-rohit.png';
+import stars5 from '../../assets/icons/stars-5.png'; // 1. Import the 5-star image
 import { FaQuoteRight } from 'react-icons/fa';
 
 const testimonialsData = [

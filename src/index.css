@@ -173,3 +173,21 @@ h1, h2, h3, h4, h5, h6 {
 .subscribe-button:hover {
   transform: scale(1.05);
 }
+
+/* src/index.css */
+
+/* ... (keep all the existing CSS) ... */
+
+/* Find and replace the existing .why-trust-section class */
+.why-trust-section {
+  /* 
+    Layering multiple backgrounds with CSS.
+    The first image listed is the TOP layer.
+  */
+  background:
+    url('./assets/topo-lines-bg.png') center / cover no-repeat, /* Blue lines on top */
+    url('./assets/wavy-orange-bg.png') center / cover no-repeat, /* Orange waves below */
+    var(--primary-orange); /* Base orange color at the very back */
+  
+  position: relative; /* Good practice for sections with complex backgrounds */
+}

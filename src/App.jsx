@@ -1,35 +1,21 @@
-// src/App.jsx
-
 import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import InfoSection from './components/InfoSection';
-import WhyTrust from './components/WhyTrust';
-import HowItWorks from './components/HowItWorks';
-import LearningStyles from './components/LearningStyles';
-import QualityBanner from './components/QualityBanner';     // 1. Import the new component
-import ProgressSection from './components/ProgressSection'; // 2. Import the new component
-import Testimonials from './components/Testimonials';
-import CTASection from './components/CTASection';
-import Footer from './components/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
+
+import HomePage from './screens/HomePage/HomePage';
 
 function App() {
   return (
-    <>
+    <Router>
       <Header />
-      <main>
-        <Hero />
-        <InfoSection />
-        <WhyTrust />
-        <HowItWorks />
-        <LearningStyles />
-        <QualityBanner />     {/* 3. Add it here */}
-        <ProgressSection />   {/* 4. Add it here */}
-        <Testimonials />
-        <CTASection />
-      </main>
+      
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
       <Footer />
-    </>
+    </Router>
   );
 }
 

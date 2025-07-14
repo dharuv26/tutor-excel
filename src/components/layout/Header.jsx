@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar, Nav, Container, Button } from 'react-bootstrap';
-import logo from '../assets/logo.png';
+import logo from '../../assets/images/logo.png';
 import { FiSearch } from 'react-icons/fi';
 
 const Header = () => {

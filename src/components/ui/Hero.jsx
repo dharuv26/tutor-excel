@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import heroBoy from '../assets/hero-boy.png'; 
-import playIcon from '../assets/play-icon.png'; // 1. Import the PNG image
+import heroBoy from '../../assets/images/hero-boy.png'; 
+import playIcon from '../../assets/icons/play-icon.png'; // 1. Import the PNG image
 import { FaArrowRight } from 'react-icons/fa';
 
 const Hero = () => {

@@ -1,0 +1,72 @@
+// src/components/HowItWorksSection.jsx
+
+import React from 'react';
+import { Container, Row, Col, Button } from 'react-bootstrap';
+
+/**
+ * A reusable component for displaying a step-by-step process.
+ *
+ * @param {object} props The component props.
+ * @param {string} [props.headingText='How It Works'] The main title of the section.
+ * @param {Array<{icon: string, title: string, description: string}>} [props.stepsData=[]] Data for each step.
+ * @param {string} [props.arrowIcon] The source URL for the arrow separator icon.
+ * @param {boolean} [props.showButton=true] Whether to show the final button.
+ * @param {string} [props.buttonText='Get Started'] The text for the button.
+ * @param {string} [props.backgroundClass='hero-section-bg'] The CSS class for the section's background.
+ * @param {React.ReactNode} [props.buttonIcon] An optional icon component to display in the button.
+ */
+const HowItWorksSection = ({
+  headingText = 'How It Works',
+  stepsData = [],
+  arrowIcon,
+  showButton = false,
+  buttonText = 'Get Started',
+  backgroundClass = 'hero-section-bg',
+  buttonIcon,
+}) => {
+  return (
+    <section className={backgroundClass} style={{ padding: '80px 0' }}>
+      <Container>
+        <div className="bg-white p-5 rounded-4 shadow-sm">
+          <div className="text-center">
+            <h2 className="fw-bolder" style={{ fontSize: '2.8rem' }}>{headingText}</h2>
+          </div>
+          
+          <Row className="mt-5 g-4 justify-content-between align-items-start">
+            {stepsData.map((step, index) => (
+              <React.Fragment key={index}>
+                <Col lg={2} md={6} className="text-center">
+                  <img 
+                    src={step.icon} 
+                    alt={`${step.title} icon`} 
+                    className="mb-3" 
+                    style={{ width: '60px', height: '60px' }} 
+                  />
+                  <h4 className="fw-bold">{step.title}</h4>
+                  <p className="text-secondary small">{step.description}</p>
+                </Col>
+
+                {/* Conditionally render the arrow icon if it's provided and not the last item */}
+                {arrowIcon && index < stepsData.length - 1 && (
+                  <Col lg="auto" className="d-none d-lg-flex align-items-center" style={{ paddingTop: '40px' }}>
+                    <img src={arrowIcon} alt="arrow separator" style={{ width: '32px' }} />
+                  </Col>
+                )}
+              </React.Fragment>
+            ))}
+          </Row>
+          
+          {showButton && (
+            <div className="text-center mt-5">
+              <Button variant="primary-orange" size="lg" className="d-inline-flex align-items-center">
+                {buttonText} {buttonIcon && <span className="ms-2">{buttonIcon}</span>}
+              </Button>
+            </div>
+          )}
+        </div>
+      </Container>
+    </section>
+  );
+};
+
+export default HowItWorksSection;

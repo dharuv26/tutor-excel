@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import oneOnOne from '../assets/one-on-one.png';
-import groupClasses from '../assets/group-classes.png';
+import oneOnOne from '../../assets/images/one-on-one.png';
+import groupClasses from '../../assets/images/group-classes.png';
 
 const LearningStyles = () => {
     return (
