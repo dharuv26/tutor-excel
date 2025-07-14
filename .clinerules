@@ -1,0 +1,29 @@
+# === Cline Development Rules for TutorExel ===
+
+## 0. Operational Protocol (Meta-Rules)
+- **Read First:** Before starting ANY task, read all files in the `/memory-bank` directory (`projectBrief.md`, `productContext.md`, `techContext.md`, `systemPatterns.md`, `activeContext.md`, `progress.md`) to fully understand the current project state, context, and rules.
+- **Update After:** After successfully completing a task, explicitly state the changes made and ask the user for confirmation. Once the user confirms, update the relevant files in `/memory-bank` (especially `progress.md` and `activeContext.md`) to reflect the new project state.
+
+## 1. Architecture & Structure
+- **Component-First:** All UI must be built as reusable components. Avoid monolithic page files.
+- **Screen/Component Separation:**
+    - `src/screens`: Top-level page components (e.g., `HomePage`). They assemble UI components and manage page-specific logic and data.
+    - `src/components/ui`: Small, highly reusable UI elements (e.g., `SubjectCard`, `FeatureSection`). These should be "dumb" and receive all data via props.
+    - `src/components/layout`: Major structural components used across most pages (e.g., `Header`, `Footer`).
+- **Asset Organization:**
+    - `src/assets/images`: For larger, photographic, or background images.
+    - `src/assets/icons`: For small, symbolic, and UI-element graphics.
+
+## 2. Styling
+- **Bootstrap First:** Use `react-bootstrap` components as the primary foundation for layout.
+- **Global Styles (`index.css`):** This file is ONLY for truly global styles like CSS variables, body styles, typography, and global helper classes.
+- **Component-Specific Styles:** Use dedicated CSS files (e.g., `ui.css`) for styles tightly coupled to a group of reusable components.
+- **Responsiveness:** All components must be responsive.
+
+## 3. Component Design
+- **Props-Driven:** Components must be made dynamic through props. Avoid hardcoding content.
+- **Default Props:** All props that are not strictly required should have sensible default values.
+
+## 4. Code & Tooling
+- **React Router DOM:** All page navigation must be handled by `react-router-dom`. The main routing setup resides in `App.jsx`.
+- **Formatting:** Code must be formatted consistently (e.g., with Prettier).
