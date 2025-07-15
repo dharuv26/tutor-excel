@@ -2,7 +2,6 @@ import React from 'react';
 import { Navbar, Nav, Container, Button } from 'react-bootstrap';
 import logo from '../../assets/images/logo.svg';
 import { FiSearch } from 'react-icons/fi';
-import ButtonCustom from '../ui/Button'; // Assuming you have a custom button component
 
 const Header = () => {
   return (
