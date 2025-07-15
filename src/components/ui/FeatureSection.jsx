@@ -3,7 +3,7 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { FaArrowRight } from 'react-icons/fa';
-import checkmarkIcon from '../../assets/icons/checkmark-icon.png'; // Reusing the checkmark icon
+import checkmarkIcon from '../../assets/icons/checkmark-icon.svg'; // Reusing the checkmark icon
 
 /**
  * A reusable component for a two-column layout featuring an image and text content.
@@ -45,7 +45,7 @@ const FeatureSection = ({
 
   const TextColumn = (
     <Col lg={6}>
-      <h2 className="fw-bolder" style={{ fontSize: '2.8rem', lineHeight: '1.3' }}>
+      <h2 className="fw-bolder" style={{ fontSize: '2.6rem', lineHeight: '1.3' }}>
         {headingText}
       </h2>
       <div className="text-secondary mt-3 mb-4 fs-5">
@@ -55,7 +55,7 @@ const FeatureSection = ({
       <div className="d-grid gap-3">
         {features.map((feature, index) => (
           <div key={index}>
-            <div className="feature-item">
+            <div className="feature-item" style={{ borderRadius: '10px' }}>
               <img src={checkmarkIcon} alt="Checkmark" style={{ width: '28px', height: '28px' }} />
               <span>
                 {feature.text}<strong>{feature.bold}</strong>
@@ -66,7 +66,7 @@ const FeatureSection = ({
       </div>
       
       {showButton && (
-        <Button variant="primary-orange" size="lg" className="mt-4 d-inline-flex align-items-center">
+        <Button variant="primary-orange" size="sm" className="mt-4 d-inline-flex align-items-center">
           {buttonText} <FaArrowRight className="ms-2" />
         </Button>
       )}

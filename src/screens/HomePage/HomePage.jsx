@@ -5,20 +5,19 @@ import { Container, Row, Col } from 'react-bootstrap';
 // --- Import all assets here ---
 import tutoringGirl from '../../assets/images/tutoring-girl.png';
 import progressBoy from '../../assets/images/progress-boy.png';
-import iconEducators from '../../assets/icons/icon-educators.png';
-import iconLessons from '../../assets/icons/icon-lessons.png';
-import iconFlexible from '../../assets/icons/icon-flexible.png';
-import iconPricing from '../../assets/icons/icon-pricing.png';
-import iconAssess from '../../assets/icons/icon-assess.png';
-import iconPlan from '../../assets/icons/icon-plan.png';
-import iconExperience from '../../assets/icons/icon-experience.png';
-import iconLearnGrow from '../../assets/icons/icon-learn-grow.png';
-import arrowSeparator from '../../assets/icons/arrow-separator.png';
+import iconEducators from '../../assets/icons/icon-educators.svg';
+import iconLessons from '../../assets/icons/icon-lessons.svg';
+import iconFlexible from '../../assets/icons/icon-flexible.svg';
+import iconPricing from '../../assets/icons/icon-pricing.svg';
+import iconAssess from '../../assets/icons/icon-assess.svg';
+import iconPlan from '../../assets/icons/icon-plan.svg';
+import iconExperience from '../../assets/icons/icon-experience.svg';
+import iconLearnGrow from '../../assets/icons/icon-learn-grow.svg';
 import ctaFamily from '../../assets/images/cta-family.png';
 import teacherOk from '../../assets/images/teacher-ok.png';
-import iconMath from '../../assets/icons/icon-math.png';
-import iconScience from '../../assets/icons/icon-science.png';
-import iconEnglish from '../../assets/icons/icon-english.png';
+import iconMath from '../../assets/icons/icon-math.svg';
+import iconScience from '../../assets/icons/icon-science.svg';
+import iconEnglish from '../../assets/icons/icon-english.svg';
 
 // --- Import all components here ---
 import Hero from '../../components/ui/Hero';
@@ -116,6 +115,7 @@ const HomePage = () => {
           imagePosition="left"
           image={tutoringGirl}
           headingText="Private Online Tutoring Across Australia"
+          descriptionText="One-on-one and group lessons for all grades, subjects, and test preparation."
           features={tutoringFeatures}
           buttonText="Book Your Free Trial Class"
         />
@@ -149,7 +149,6 @@ const HomePage = () => {
         <HowItWorksSection
           headingText="How It Works"
           stepsData={howItWorksSteps}
-          arrowIcon={arrowSeparator}
           showButton={true}
           buttonText="Take your assessment test"
           buttonIcon={<FaArrowRight />}
@@ -179,7 +178,7 @@ const HomePage = () => {
           image={ctaFamily}
           primaryButtonText="Book Your Free Trial Class"
           primaryButtonIcon={<FaArrowRight />}
-          primaryButtonTextColor="#FF9E10" // The hex code for your brand orange
+          primaryButtonTextColor="black" // The hex code for your brand orange
 
           secondaryButtonText="Contact Us to Learn More"
           secondaryButtonIcon={<FaArrowRight />}

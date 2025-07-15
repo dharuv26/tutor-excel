@@ -20,7 +20,7 @@ const LearningStyles = () => {
                     {/* --- One-to-One Tutoring Card --- */}
                     <Col md={6}>
                         {/* 2. Set the card's background color and remove the border */}
-                        <Card className="h-100" style={{ backgroundColor: '#FFFBF5', border: 'none', borderRadius: '20px' }}>
+                        <Card className="h-100" style={{ backgroundColor: '#FFF3E3', border: 'none', borderRadius: '20px' }}>
                             <Card.Img variant="top" src={oneOnOne} style={{ borderRadius: '20px 20px 0 0' }} />
                             <Card.Body className="p-4">
                                 <Card.Title as="h3" className="fw-bold">One-to-One Tutoring</Card.Title>
@@ -37,7 +37,7 @@ const LearningStyles = () => {
                     {/* --- Group Classes Card --- */}
                     <Col md={6}>
                         {/* 2. Set the card's background color and remove the border */}
-                        <Card className="h-100" style={{ backgroundColor: '#F0F9FF', border: 'none', borderRadius: '20px' }}>
+                        <Card className="h-100" style={{ backgroundColor: '#E8F9FF', border: 'none', borderRadius: '20px' }}>
                             <Card.Img variant="top" src={groupClasses} style={{ borderRadius: '20px 20px 0 0' }} />
                             <Card.Body className="p-4">
                                 <Card.Title as="h3" className="fw-bold">Group Classes</Card.Title>

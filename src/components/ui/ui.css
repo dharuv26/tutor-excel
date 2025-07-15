@@ -32,3 +32,14 @@
   border-style: solid;
   border-color: var(--primary-blue) transparent transparent transparent;
 }
+
+/* This is the class we need for the TrustSection */
+.why-trust-section {
+  background:
+    url('../../assets/images/topo-lines-bg.png') center / cover no-repeat, /* Blue lines on top */
+    var(--primary-orange); /* Base orange color at the very back */
+  
+  position: relative;
+}
+
+/* ... (other global styles) ... */

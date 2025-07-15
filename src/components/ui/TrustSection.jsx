@@ -1,23 +1,14 @@
-// src/components/TrustSection.jsx
-
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
+import './ui.css';
 
-/**
- * A reusable component for displaying a grid of trust-building feature cards.
- *
- * @param {object} props The component props.
- * @param {string} [props.headingText='Why Our Customers Trust Us'] The main heading text for the section.
- * @param {Array<{icon: string, title: string, description: string, highlight?: boolean}>} [props.cardsData=[]] An array of data for the feature cards.
- * @param {React.CSSProperties} [props.customStyles={}] Custom inline styles to apply to the section container.
- */
 const TrustSection = ({
   headingText = 'Why Our Customers Trust Us',
   cardsData = [],
   customStyles = {},
 }) => {
   return (
-    // The main section with the wavy orange background
+    // Ensure the className is set to "why-trust-section"
     <section className="why-trust-section py-5" style={customStyles}>
       <Container>
         <div className="text-center">
@@ -31,7 +22,6 @@ const TrustSection = ({
             <Col lg={3} md={6} key={index}>
               <Card 
                 className="h-100 border-0 shadow-sm p-4 text-center" 
-                // Conditionally apply a blue border if the highlight prop is true
                 style={{ 
                   borderRadius: '20px', 
                   border: card.highlight ? '3px solid #22A3D2' : 'none' 

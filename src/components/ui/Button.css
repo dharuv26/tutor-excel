@@ -1,0 +1,91 @@
+/* src/components/ui/Button.css */
+
+.custom-btn {
+  /* Use CSS variables passed from the component's style prop */
+  background-color: var(--bg-color, #0d6efd);
+  color: var(--text-color, white);
+  border: 1px solid var(--border-color, var(--bg-color, #0d6efd));
+  margin-left: 15px;
+
+  /* Base Styles */
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 0.75rem 1.5rem; /* Default padding (size 'md') */
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  user-select: none;
+  /* Add box-shadow to the transition for the focus state */
+  transition: transform 0.2s ease-in-out, background-color 0.2s, border-color 0.2s, box-shadow 0.15s ease-in-out;
+}
+
+/* --- HOVER STATE (Zoom only) --- */
+.custom-btn:hover {
+  transform: scale(1.05);
+}
+
+/* --- FOCUS STATE (For accessibility after click or tabbing) --- */
+.custom-btn:focus {
+  /* A subtle blue glow for accessibility, doesn't change the button's core style */
+  box-shadow: 0 0 0 0.25rem rgba(34, 163, 210, 0.5); /* A translucent version of your theme blue */
+  outline: 0;
+}
+/* src/components/ui/Button.css */
+
+/* ... (keep all other CSS rules like .custom-btn, .custom-btn:hover, etc.) ... */
+
+
+/* --- FOCUS STATE (For accessibility after click or tabbing) --- */
+.custom-btn:focus {
+  /* The box-shadow has been removed to prevent the blue glow. */
+  box-shadow: none;
+  outline: 0; /* Still keep this to remove the browser's default ugly outline. */
+}
+
+
+/* --- ACTIVE STATE (Only during the physical click) --- */
+.custom-btn:active {
+  background-color: var(--click-bg-color, var(--bg-color));
+  color: var(--click-text-color, var(--text-color));
+  border-color: var(--click-border-color, var(--border-color));
+  transform: scale(1.05); /* Keep it zoomed while clicked */
+  box-shadow: none;
+}
+
+
+/* ... (keep all other CSS rules like size modifiers) ... */
+
+/* --- ACTIVE STATE (Only during the physical click) --- */
+/* .custom-btn:active {
+  background-color: var(--click-bg-color, var(--bg-color));
+  color: var(--click-text-color, var(--text-color));
+  border-color: var(--click-border-color, var(--border-color));
+  transform: scale(1.05);
+
+  box-shadow: none;
+} */
+
+
+/* --- SIZE MODIFIERS --- */
+.custom-btn.btn-sm {
+  padding: 0.5rem 1.5rem;
+  font-size: 0.875rem;
+}
+
+.custom-btn.btn-lg {
+  padding: 0.85rem 1.8rem;
+  font-size: 1.25rem;
+}
+
+/* --- DISABLED STATE --- */
+.custom-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}

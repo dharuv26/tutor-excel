@@ -1,7 +1,8 @@
 import React from 'react';
 import { Navbar, Nav, Container, Button } from 'react-bootstrap';
-import logo from '../../assets/images/logo.png';
+import logo from '../../assets/images/logo.svg';
 import { FiSearch } from 'react-icons/fi';
+import ButtonCustom from '../ui/Button'; // Assuming you have a custom button component
 
 const Header = () => {
   return (
@@ -20,7 +21,16 @@ const Header = () => {
             <Nav.Link href="#contact" className="fw-medium">Contact Us</Nav.Link>
             <Nav.Link href="#faqs" className="fw-medium">FAQs</Nav.Link>
             <Nav.Link href="#search" className="ms-lg-3"><FiSearch size={22} /></Nav.Link>
-            <Button variant="primary-orange" className="ms-lg-3 mt-3 mt-lg-0">Free Trial</Button>
+            <ButtonCustom 
+              size = 'md'
+              children = "Free Trial"
+              textColor = 'white'
+              backgroundColor = '#FF9E10'
+              clickBackgroundColor = 'white'
+              clickTextColor ='black'
+              clickBorderColor = 'black'
+              onClick
+            ></ButtonCustom>
           </Nav>
         </Navbar.Collapse>
       </Container>

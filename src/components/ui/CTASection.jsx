@@ -31,13 +31,13 @@ const CTASection = ({
           <div className="bg-primary-orange-gradient p-5 rounded-4 overflow-hidden">
             <Row className="align-items-center">
               <Col lg={7}>
-                <h2 className="display-4 fw-bolder text-dark-navy">
+                <h2 className="display-4 fw-bolder text-white">
                   {headingText}
                 </h2>
                 <div className="d-flex flex-column flex-sm-row gap-3 mt-4">
                   {/* 3. Apply the custom text color to the primary button */}
                   <Button 
-                    size="lg" 
+                    size="sm" 
                     className="btn-white-custom" 
                     style={{ color: primaryButtonTextColor }}
                   >
@@ -46,7 +46,7 @@ const CTASection = ({
                   
                   {/* 4. Apply the custom text color to the secondary button */}
                   <Button 
-                    size="lg" 
+                    size="sm" 
                     variant="secondary-blue" 
                     style={{ color: secondaryButtonTextColor }}
                   >

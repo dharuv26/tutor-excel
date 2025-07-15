@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
+import arrowSeparator from '../../assets/icons/arrow-separator.svg';
 
 /**
  * A reusable component for displaying a step-by-step process.
@@ -9,7 +10,6 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
  * @param {object} props The component props.
  * @param {string} [props.headingText='How It Works'] The main title of the section.
  * @param {Array<{icon: string, title: string, description: string}>} [props.stepsData=[]] Data for each step.
- * @param {string} [props.arrowIcon] The source URL for the arrow separator icon.
  * @param {boolean} [props.showButton=true] Whether to show the final button.
  * @param {string} [props.buttonText='Get Started'] The text for the button.
  * @param {string} [props.backgroundClass='hero-section-bg'] The CSS class for the section's background.
@@ -18,7 +18,6 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 const HowItWorksSection = ({
   headingText = 'How It Works',
   stepsData = [],
-  arrowIcon,
   showButton = false,
   buttonText = 'Get Started',
   backgroundClass = 'hero-section-bg',
@@ -27,11 +26,11 @@ const HowItWorksSection = ({
   return (
     <section className={backgroundClass} style={{ padding: '80px 0' }}>
       <Container>
-        <div className="bg-white p-5 rounded-4 shadow-sm">
+        
           <div className="text-center">
             <h2 className="fw-bolder" style={{ fontSize: '2.8rem' }}>{headingText}</h2>
           </div>
-          
+          <div className="bg-white p-5 rounded-4 shadow-sm mt-5">
           <Row className="mt-5 g-4 justify-content-between align-items-start">
             {stepsData.map((step, index) => (
               <React.Fragment key={index}>
@@ -47,23 +46,23 @@ const HowItWorksSection = ({
                 </Col>
 
                 {/* Conditionally render the arrow icon if it's provided and not the last item */}
-                {arrowIcon && index < stepsData.length - 1 && (
+                {index < stepsData.length - 1 && (
                   <Col lg="auto" className="d-none d-lg-flex align-items-center" style={{ paddingTop: '40px' }}>
-                    <img src={arrowIcon} alt="arrow separator" style={{ width: '32px' }} />
+                    <img src={arrowSeparator} alt="arrow separator" style={{ width: '32px' }} />
                   </Col>
                 )}
               </React.Fragment>
             ))}
           </Row>
-          
+          </div>
           {showButton && (
             <div className="text-center mt-5">
-              <Button variant="primary-orange" size="lg" className="d-inline-flex align-items-center">
+              <Button variant="primary-orange" size="sm" className="d-inline-flex align-items-center">
                 {buttonText} {buttonIcon && <span className="ms-2">{buttonIcon}</span>}
               </Button>
             </div>
           )}
-        </div>
+        
       </Container>
     </section>
   );

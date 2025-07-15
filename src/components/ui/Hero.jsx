@@ -3,7 +3,7 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import heroBoy from '../../assets/images/hero-boy.png'; 
-import playIcon from '../../assets/icons/play-icon.png'; // 1. Import the PNG image
+import playIcon from '../../assets/icons/icon-play.svg'; // 1. Import the PNG image
 import { FaArrowRight } from 'react-icons/fa';
 
 const Hero = () => {
@@ -19,7 +19,7 @@ const Hero = () => {
               Select a plan, set your schedule, and watch your child's skills and confidence grow.
             </p>
             <div className="d-flex flex-column flex-sm-row align-items-center gap-4 justify-content-center justify-content-lg-start">
-              <Button variant="primary-orange" size="lg" className="d-inline-flex align-items-center">
+              <Button variant="primary-orange" size="sm" className="d-inline-flex align-items-center">
                 Book Your Free Trial Class <FaArrowRight className="ms-2" />
               </Button>
               <a href="#" className="btn d-inline-flex align-items-center gap-2 fw-semibold text-dark-navy text-decoration-none">
@@ -40,18 +40,6 @@ const Hero = () => {
             </div>
           </Col>
           <Col lg={6} className="d-flex justify-content-center position-relative">
-            <div 
-              className="position-absolute" 
-              style={{ 
-                width: '100%', 
-                height: '100%', 
-                maxWidth: '450px',
-                background: 'var(--teal-green)',
-                clipPath: 'polygon(25% 0%, 100% 25%, 75% 100%, 0% 75%)',
-                opacity: '0.8',
-                zIndex: 0,
-              }}
-            ></div>
             <img 
               src={heroBoy} 
               alt="Student learning with headset" 

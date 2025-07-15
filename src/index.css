@@ -85,7 +85,6 @@ h1, h2, h3, h4, h5, h6 {
 /* Add this new class for the section with the wavy orange background */
 .why-trust-section {
   background-color: var(--primary-orange);
-  background-image: url('./assets/wavy-orange-bg.png'); /* Path to your new background image */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -147,7 +146,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .footer-subjects-list li::before {
   content: '•';
-  color: var(--primary-orange);
   font-weight: bold;
   position: absolute;
   left: 0;
@@ -185,8 +183,7 @@ h1, h2, h3, h4, h5, h6 {
     The first image listed is the TOP layer.
   */
   background:
-    url('./assets/topo-lines-bg.png') center / cover no-repeat, /* Blue lines on top */
-    url('./assets/wavy-orange-bg.png') center / cover no-repeat, /* Orange waves below */
+    url('./assets/icons/topo-lines-bg.png') center / cover no-repeat, /* Blue lines on top */
     var(--primary-orange); /* Base orange color at the very back */
   
   position: relative; /* Good practice for sections with complex backgrounds */

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Row, Col, Form, InputGroup, Button } from 'react-bootstrap';
-import logo from '../../assets/images/logo.png';
-import iconFacebook from '../../assets/icons/icon-facebook.png'; // 1. Import new icons
-import iconInstagram from '../../assets/icons/icon-instagram.png';
+import logo from '../../assets/images/logo.svg';
+import iconFacebook from '../../assets/icons/icon-facebook.svg'; // 1. Import new icons
+import iconInstagram from '../../assets/icons/icon-instagram.svg';
 import { MdEmail } from 'react-icons/md';
 
 const Footer = () => {
