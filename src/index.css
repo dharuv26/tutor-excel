@@ -125,8 +125,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-white-custom:hover {
   background-color: #fff8f0; /* A very light orange for hover */
-  color: var(--primary-orange);
+  border: 2px solid white;
   transform: scale(1.05);
+}
+
+.btn-white-custom:active {
+  background-color: var(--primary-orange) !important;
+  border-color: white !important; /* White border on click */
+  color: white !important; /* White text on click */
+  transform: scale(1.05); /* Keep it zoomed while clicked */
+  box-shadow: none;
 }
 
 /* Custom styles for the footer */
