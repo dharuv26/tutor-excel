@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <section className="hero-section-bg py-5">
       <Container>
-        <Row className="align-items-center gy-5" style={{ minHeight: 'calc(100vh - 90px)' }}>
+        <Row className="align-items-center gy-5" style={{ minHeight: '70vh' }}>
           <Col lg={6} className="text-center text-lg-start">
             <h1 className="display-4 fw-bolder text-dark-navy">
               Empowering Your Child to Succeed Anywhere
