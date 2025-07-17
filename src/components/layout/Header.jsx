@@ -18,7 +18,7 @@ const Header = () => {
     <Navbar bg="white" expand="lg" className="shadow-sm sticky-top py-3">
       <Container>
         <Navbar.Brand as={Link} to="/">
-          <img src={logo} height="40" alt="TutorExel Logo" />
+          <img src={logo} height="36" alt="TutorExel Logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="main-navbar-nav" />
         <Navbar.Collapse id="main-navbar-nav">
