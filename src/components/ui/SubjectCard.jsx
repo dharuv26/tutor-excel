@@ -3,6 +3,7 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import { FaArrowRight } from 'react-icons/fa';
+import './ui.css';
 
 const SubjectCard = ({
   icon,
@@ -13,7 +14,7 @@ const SubjectCard = ({
 }) => {
   return (
     // Add text-start class to the Card component to align all text to the left
-    <Card className="h-100 shadow-sm p-4 text-start" style={{ border: '1px solid #dee2e6', borderRadius: '20px' }}>
+    <Card className="h-100 shadow-sm p-4 text-start subject-card">
       <Card.Body className="d-flex flex-column">
         {/* The icon is already aligned left by default block behavior */}
         <img 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import { Container, Row, Col } from 'react-bootstrap';
+import './HomePage.css';
 
 // --- Import all assets here ---
 import tutoringGirl from '../../assets/images/tutoring-girl.png';
@@ -73,6 +74,16 @@ const subjectsData = [
         description: 'Build strong numeracy skills and master concepts aligned with the Australian curriculum.',
     },
     {
+        icon: iconMath,
+        title: 'Mathematics',
+        description: 'Build strong numeracy skills and master concepts aligned with the Australian curriculum.',
+    },
+    {
+        icon: iconMath,
+        title: 'Mathematics',
+        description: 'Build strong numeracy skills and master concepts aligned with the Australian curriculum.',
+    },
+    {
         icon: iconScience,
         title: 'Science',
         description: 'Explore biology, chemistry, and physics with engaging lessons that spark curiosity'
@@ -127,24 +138,30 @@ const HomePage = () => {
         />
 
         <section className="py-5">
-          <Container className="text-center">
+        <Container>
+          <div className="text-center">
             <h2 className="fw-bolder" style={{ fontSize: '2.8rem' }}>Subjects We Offer</h2>
             <p className="lead text-secondary mx-auto mt-3" style={{ maxWidth: '700px' }}>
               Tutorexel helps your child excel in every area:
             </p>
-            <Row className="mt-3 g-4 justify-content-center">
-              {subjectsData.map((subject, index) => (
-                <Col lg={4} md={6} key={index}>
-                  <SubjectCard
-                    icon={subject.icon}
-                    title={subject.title}
-                    description={subject.description}
-                  />
-                </Col>
-              ))}
-            </Row>
-          </Container>
-        </section>
+          </div>
+        </Container>
+        
+        <Container fluid>
+          <div className="horizontal-scroll-container">
+            {subjectsData.map((subject, index) => (
+              <Col md={5} lg={4} xl={3} key={index} className="flex-shrink-0">
+                <SubjectCard
+                  icon={subject.icon}
+                  title={subject.title}
+                  description={subject.description}
+                />
+              </Col>
+            ))}
+          </div>
+        </Container>
+      </section>
+
 
         <HowItWorksSection
           headingText="How It Works"
