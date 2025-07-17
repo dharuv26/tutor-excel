@@ -42,4 +42,21 @@
   position: relative;
 }
 
-/* ... (other global styles) ... */
+/* src/components/ui/ui.css */
+
+/* ... (keep all other CSS rules) ... */
+
+
+/* --- Page Hero Banner Styles --- */
+.page-hero-banner {
+  background: linear-gradient(to right, #CDF2FF, #FFE8C7);
+  display: flex;
+  align-items: center;
+  min-height: 300px;
+}
+
+@media (max-width: 768px) {
+  .page-hero-banner {
+    padding: 100px 0;
+  }
+}

@@ -17,6 +17,7 @@ import approachQuality from '../../assets/icons/icon-quality.svg';
 import approachFlexibility from '../../assets/icons/icon-flexibility.svg';
 
 // 3. Import all reusable components
+import PageHero from '../../components/ui/PageHero';
 import ContentBanner from '../../components/ui/ContentBanner';
 import FeatureSection from '../../components/ui/FeatureSection';
 import HowItWorksSection from '../../components/ui/HowItWorksSection';
@@ -41,20 +42,16 @@ const ourApproachSteps = [
 const AboutUsPage = () => {
   return (
     <main>
-      <section className="about-hero-section">
+      <PageHero title="About Us" />
+
+      <section className="py-6 bg-white mt-5">
         <Container>
-          <h1>About Us</h1>
-          <div className="decorator-line"></div>
-        </Container>
-      </section>
-      <section className="py-5 bg-white">
-        <Container>
-          <Row className="justify-content-center">
-            <Col lg={8} className="text-center">
+          <Row className="">
+            <Col lg={11} className="">
               <h2 className="fw-bolder" style={{ fontSize: '2.8rem' }}>
-                About <img src={logo} alt="TutorExel" style={{ height: '45px', verticalAlign: 'middle', marginTop: '-10px' }} />
+                About <img src={logo} alt="TutorExel" style={{ height: '35px', verticalAlign: 'middle', marginTop: '-10px' }} />
               </h2>
-              <p className="lead text-secondary mt-3">
+              <p className="lead mt-3">
                 TutorExel is an online tutoring company dedicated to helping school students succeed through high-quality, personalised education. We believe that every child deserves <strong>individual attention and expert guidance</strong>, no matter where they live. That’s why we bring together <strong>qualified teachers and proven learning methods</strong> to deliver engaging lessons right to your home.
               </p>
             </Col>
