@@ -17,7 +17,7 @@ const TrustSection = ({
           </h2>
         </div>
         
-        <Row className="mt-5 g-4">
+        <Row className="mt-3 g-4">
           {cardsData.map((card, index) => (
             <Col lg={3} md={6} key={index}>
               <Card 

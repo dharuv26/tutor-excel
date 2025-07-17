@@ -30,7 +30,7 @@ const HowItWorksSection = ({
           <div className="text-center">
             <h2 className="fw-bolder" style={{ fontSize: '2.8rem' }}>{headingText}</h2>
           </div>
-          <div className="bg-white p-5 rounded-4 shadow-sm mt-5">
+          <div className="bg-white px-5 py-3 rounded-4 shadow-sm mt-5">
           <Row className="mt-5 g-4 justify-content-between align-items-start">
             {stepsData.map((step, index) => (
               <React.Fragment key={index}>

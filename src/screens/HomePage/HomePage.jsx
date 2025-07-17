@@ -126,13 +126,13 @@ const HomePage = () => {
           cardsData={whyTrustCards}
         />
 
-        <section className="py-5 bg-light-gray">
+        <section className="py-5">
           <Container className="text-center">
             <h2 className="fw-bolder" style={{ fontSize: '2.8rem' }}>Subjects We Offer</h2>
             <p className="lead text-secondary mx-auto mt-3" style={{ maxWidth: '700px' }}>
               Tutorexel helps your child excel in every area:
             </p>
-            <Row className="mt-5 g-4 justify-content-center">
+            <Row className="mt-3 g-4 justify-content-center">
               {subjectsData.map((subject, index) => (
                 <Col lg={4} md={6} key={index}>
                   <SubjectCard
