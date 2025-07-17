@@ -25,7 +25,7 @@ const CTASection = ({
   customStyles = {},
 }) => {
   return (
-    <section className="bg-white" style={{ paddingTop: '80px', paddingBottom: '150px', ...customStyles }}>
+    <section className="bg-white" style={{ paddingTop: '80px', paddingBottom: '80px', ...customStyles }}>
       <Container>
         <div className="position-relative">
           <div className="bg-primary-orange-gradient p-5 rounded-4 overflow-hidden" style={{ minHeight: '230px'}}>
