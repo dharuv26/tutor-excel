@@ -20,12 +20,16 @@ const ContentBanner = ({
   imageAlt = '',
   imagePosition = 'left',
   content,
-  backgroundColor = 'bg-primary-orange-gradient',
+  backgroundColor = '#FF9E10',
   className = '',
   customStyles = {},
 }) => {
   const imageColSize = image && content ? 6 : 12;
   const contentColSize = image && content ? 6 : 12;
+
+  const contentStyles = {
+    background: backgroundColor,
+  };
 
   const ImageColumn = image ? (
     <Col md={imageColSize}>
@@ -34,7 +38,7 @@ const ContentBanner = ({
   ) : null;
 
   const ContentColumn = content ? (
-    <Col md={contentColSize} className={`${backgroundColor} d-flex align-items-center p-5`}>
+    <Col md={contentColSize} className="d-flex align-items-center p-5" style={contentStyles}>
       {content}
     </Col>
   ) : null;
