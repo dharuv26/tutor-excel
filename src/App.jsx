@@ -11,6 +11,7 @@ import Footer from './components/layout/Footer';
 import HomePage from './screens/HomePage/HomePage';
 import AboutUsPage from './screens/AboutUsPage/AboutUsPage';
 import CareersPage from './screens/CareersPage/CareersPage';
+import PricingPage from './screens/PricingPage/PricingPage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutUsPage />} />
         <Route path="/careers" element={<CareersPage />} />
+        <Route path="/pricing" element={<PricingPage />} />
       </Routes>
 
       <Footer />
