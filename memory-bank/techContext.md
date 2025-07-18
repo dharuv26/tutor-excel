@@ -3,9 +3,11 @@
 - **Build Tool:** Vite
 - **Core Library:** React
 - **Styling Framework:** `react-bootstrap` and `bootstrap`
-- **Custom Styling:** Global CSS variables and helper classes in `src/index.css`, with component-specific styles in `src/components/ui/ui.css`.
-- **Routing:** `react-router-dom` for all page navigation.
-- **Icons:** A mix of `react-icons` and static PNG assets from `src/assets/icons/`.
+- **Custom Styling:** Global CSS variables in `index.css`, with component/page-specific CSS files.
+- **Routing:** `react-router-dom`.
+- **Asset Formats:**
+    - **Icons:** Primarily SVG format for scalability and quality.
+    - **Images:** PNG or other appropriate raster formats.
 - **Project Structure:**
     - `/src/screens`: Contains page-level components.
     - `/src/components/ui`: Contains small, reusable UI components.

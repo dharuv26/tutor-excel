@@ -14,10 +14,20 @@
     - `src/assets/images`: For larger, photographic, or background images.
     - `src/assets/icons`: For small, symbolic, and UI-element graphics.
 
-## 2. Styling
-- **Bootstrap First:** Use `react-bootstrap` components as the primary foundation for layout.
-- **Global Styles (`index.css`):** This file is ONLY for truly global styles like CSS variables, body styles, typography, and global helper classes.
-- **Component-Specific Styles:** Use dedicated CSS files (e.g., `ui.css`) for styles tightly coupled to a group of reusable components.
+## 2. Naming Conventions
+- **Components:** PascalCase (e.g., `FeatureSection.jsx`).
+- **Pages/Screens:** PascalCase suffixed with `Page` (e.g., `PricingPage.jsx`).
+- **CSS Files:** Match the component/page name (e.g., `PricingPage.css`).
+- **Asset Files:**
+    - All files must be lowercase.
+    - Use hyphens (`-`) to separate words.
+    - **Icons:** Must be prefixed with `icon-` (e.g., `icon-schedule.svg`).
+    - **Images:** Should be descriptive (e.g., `teacher-magnifying-glass.png`).
+
+## 3. Styling
+- **Bootstrap First:** Use `react-bootstrap` components as the primary foundation.
+- **Global Styles (`index.css`):** Only for truly global styles (variables, body, typography, global helpers, base button styles).
+- **Component-Specific Styles:** Use dedicated CSS files for styles tightly coupled to a component or page.
 - **Responsiveness:** All components must be responsive.
 
 ## 3. Component Design
