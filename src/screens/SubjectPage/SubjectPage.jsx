@@ -85,14 +85,18 @@ const SubjectPage = () => {
               <div className="course-content-section">
                 <h2 className="text-center fw-bolder">{subjectContent.courseContent.heading}</h2>
                 <hr className="my-4" />
-                {subjectContent.courseContent.topics.map(topic => (
-                  <div className="topic-block" key={topic.title}>
-                    <h4>{topic.title}</h4>
-                    <ul className="text-secondary">
-                      {topic.points.map(point => <li key={point}>{point}</li>)}
-                    </ul>
-                  </div>
-                ))}
+                <Row>
+                  {subjectContent.courseContent.topics.map(topic => (
+                    <Col md={6} key={topic.title}>
+                      <div className="topic-block" key={topic.title}>
+                        <h4>{topic.title}</h4>
+                        <ul className="text-secondary">
+                          {topic.points.map(point => <li key={point}>{point}</li>)}
+                        </ul>
+                      </div>
+                    </Col>
+                  ))}
+                </Row>
               </div>
             </Col>
           </Row>

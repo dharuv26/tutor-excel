@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Form, InputGroup, Button } from 'react-bootstrap';
+import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/images/logo.svg';
 import iconFacebook from '../../assets/icons/icon-facebook.svg'; // 1. Import new icons
 import iconInstagram from '../../assets/icons/icon-instagram.svg';
@@ -37,9 +38,10 @@ const Footer = () => {
 
           {/* Subscribe Column */}
           <Col lg={3} md={4}>
-            <h5 className="text-white fw-bold mb-4">Subscribe</h5>
-            <Form.Control type="email" placeholder="Enter your Email" className="subscribe-input mb-3" />
-            <Button className="subscribe-button w-100">SUBSCRIBE NOW</Button>
+            <h5 className="text-white fw-bold mb-4">Quick Links</h5>
+            <a href="/about" className="text-white-50 text-decoration-none mb-2 d-block">About Us</a>
+            <a href="/careers" className="text-white-50 text-decoration-none mb-2 d-block">Careers</a>
+            <a href="/contact" className="text-white-50 text-decoration-none mb-2 d-block">Contact Us</a>
           </Col>
 
           {/* Contact Column */}
