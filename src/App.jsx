@@ -14,6 +14,7 @@ import CareersPage from './screens/CareersPage/CareersPage';
 import PricingPage from './screens/PricingPage/PricingPage';
 import SubjectPage from './screens/SubjectPage/SubjectPage';
 import StudentForm from './screens/ContactPage/StudentForm';
+import TeacherForm from './screens/ContactPage/TeacherForm';
 import ThankYouPage from './screens/ContactPage/ThankYouPage';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/subjects/:yearId/:subjectId" element={<SubjectPage />} />
         <Route path="/contact" element={<StudentForm />} />
+        <Route path="/contact/careers" element={<TeacherForm />} />
         <Route path="/contact/thank-you" element={<ThankYouPage />} />
       </Routes>
 

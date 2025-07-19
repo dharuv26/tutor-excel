@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import arrowSeparator from '../../assets/icons/arrow-separator.svg';
 
 /**
@@ -14,6 +15,7 @@ import arrowSeparator from '../../assets/icons/arrow-separator.svg';
  * @param {string} [props.buttonText='Get Started'] The text for the button.
  * @param {string} [props.backgroundClass='hero-section-bg'] The CSS class for the section's background.
  * @param {React.ReactNode} [props.buttonIcon] An optional icon component to display in the button.
+ * * @param {string} [props.buttonLink] An optional internal route for the button (e.g., '/contact/careers').
  */
 const HowItWorksSection = ({
   headingText = 'How It Works',
@@ -22,7 +24,13 @@ const HowItWorksSection = ({
   buttonText = 'Get Started',
   backgroundClass = 'hero-section-bg',
   buttonIcon,
+  buttonLink
 }) => {
+  const ActionButton = (
+    <Button variant="primary-orange" size="sm" className="d-inline-flex align-items-center">
+      {buttonText} {buttonIcon && <span className="ms-2">{buttonIcon}</span>}
+    </Button>
+  );
   return (
     <section className={backgroundClass} style={{ padding: '80px 0' }}>
       <Container>
@@ -57,9 +65,11 @@ const HowItWorksSection = ({
           </div>
           {showButton && (
             <div className="text-center mt-5">
-              <Button variant="primary-orange" size="sm" className="d-inline-flex align-items-center">
-                {buttonText} {buttonIcon && <span className="ms-2">{buttonIcon}</span>}
-              </Button>
+              {buttonLink ? (
+                <Link to={buttonLink}>{ActionButton}</Link>
+              ) : (
+                ActionButton
+              )}
             </div>
           )}
         

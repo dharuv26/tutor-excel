@@ -159,6 +159,7 @@ const CareersPage = () => {
         showButton={true}
         buttonText="Apply Now"
         buttonIcon={<FaArrowRight />}
+        buttonLink="/contact/careers"
       />
       
       {/* Section 8: Life at Tutorexel */}
