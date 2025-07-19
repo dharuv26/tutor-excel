@@ -12,6 +12,7 @@ import HomePage from './screens/HomePage/HomePage';
 import AboutUsPage from './screens/AboutUsPage/AboutUsPage';
 import CareersPage from './screens/CareersPage/CareersPage';
 import PricingPage from './screens/PricingPage/PricingPage';
+import SubjectPage from './screens/SubjectPage/SubjectPage';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/about" element={<AboutUsPage />} />
         <Route path="/careers" element={<CareersPage />} />
         <Route path="/pricing" element={<PricingPage />} />
+        <Route path="/subjects/:yearId/:subjectId" element={<SubjectPage />} />
       </Routes>
 
       <Footer />
