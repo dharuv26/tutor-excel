@@ -34,8 +34,8 @@ const Header = () => {
               {/* Custom Dropdown Implementation */}
               <div 
                 className="subjects-dropdown-container"
-                onMouseEnter={() => setShowSubjects(true)}
-                onMouseLeave={() => setShowSubjects(false)}
+                // onMouseEnter={() => setShowSubjects(true)}
+                // onMouseLeave={() => setShowSubjects(false)}
                 onClick={() => setShowSubjects(!showSubjects)}
               >
                 {/* This is the visible "Subjects" link */}

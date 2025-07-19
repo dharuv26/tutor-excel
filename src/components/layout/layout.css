@@ -28,6 +28,7 @@
   justify-content: center; /* Center text inside the link */
   height: 90px; /* Match navbar height */
   padding: 0 1.5rem !important;
+  cursor: pointer;
   font-weight: 500;
   color: #333 !important; /* Darker text for better contrast */
   white-space: nowrap; /* Prevent text from wrapping */
