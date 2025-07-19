@@ -67,7 +67,7 @@ const StudentForm = () => {
 
     // If validation passes, proceed with submission
     console.log("Form Data Submitted:", formData);
-    navigate('/contact/thank-you');
+    navigate('/contact/thank-you', { state: { from: 'student' } });
   };
 
   return (

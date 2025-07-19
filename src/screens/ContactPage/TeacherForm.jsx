@@ -46,7 +46,7 @@ const TeacherForm = () => {
       window.open(fileURL, '_blank');
     }
   };
-  
+
   const handleRemoveFile = () => {
     setFormData(prev => ({ ...prev, cv: null }));
     if (fileInputRef.current) {
@@ -66,7 +66,7 @@ const TeacherForm = () => {
     e.preventDefault();
     if (validateForm()) {
       console.log("Tutor Application Submitted:", formData);
-      navigate('/contact/thank-you');
+      navigate('/contact/thank-you', { state: { from: 'teacher' } });
     }
   };
 
