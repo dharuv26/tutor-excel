@@ -13,6 +13,8 @@ import AboutUsPage from './screens/AboutUsPage/AboutUsPage';
 import CareersPage from './screens/CareersPage/CareersPage';
 import PricingPage from './screens/PricingPage/PricingPage';
 import SubjectPage from './screens/SubjectPage/SubjectPage';
+import StudentForm from './screens/ContactPage/StudentForm';
+import ThankYouPage from './screens/ContactPage/ThankYouPage';
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
         <Route path="/careers" element={<CareersPage />} />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/subjects/:yearId/:subjectId" element={<SubjectPage />} />
+        <Route path="/contact" element={<StudentForm />} />
+        <Route path="/contact/thank-you" element={<ThankYouPage />} />
       </Routes>
 
       <Footer />
