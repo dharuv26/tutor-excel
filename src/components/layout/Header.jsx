@@ -22,20 +22,19 @@ const Header = () => {
       <Navbar bg="white" expand="lg" className="shadow-sm p-0">
         <Container>
           <Navbar.Brand as={Link} to="/">
-            <img src={logo} height="40" alt="TutorExel Logo" />
+            <img src={logo} height="36" alt="TutorExel Logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="main-navbar-nav" />
           <Navbar.Collapse id="main-navbar-nav">
             
-            <Nav className="mx-auto nav-centered">
+            <Nav className="mx-auto nav-centered" onMouseLeave={() => setShowSubjects(false)}>
               <NavLink to="/" className="nav-link-base">Home</NavLink>
               <NavLink to="/about" className="nav-link-base">About Us</NavLink>
               
               {/* Custom Dropdown Implementation */}
               <div 
                 className="subjects-dropdown-container"
-                // onMouseEnter={() => setShowSubjects(true)}
-                // onMouseLeave={() => setShowSubjects(false)}
+                onMouseEnter={() => setShowSubjects(true)}
                 onClick={() => setShowSubjects(!showSubjects)}
               >
                 {/* This is the visible "Subjects" link */}
