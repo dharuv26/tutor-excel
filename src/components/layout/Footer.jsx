@@ -6,7 +6,7 @@ import iconInstagram from '../../assets/icons/icon-instagram.svg';
 import { MdEmail } from 'react-icons/md';
 
 const Footer = () => {
-  const subjects = ['Mathematics', 'Science', 'English', 'Hindi', 'Punjabi', 'Music Instruments'];
+  const subjects = ['Mathematics', 'Science', 'English', 'Hindi'];
 
   return (
     // 2. Use the custom padding class

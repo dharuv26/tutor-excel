@@ -10,7 +10,7 @@ import './layout.css';
 
 const subjectsByYear = Array.from({ length: 10 }, (_, i) => ({
   year: `Year ${i + 1}`,
-  subjects: ['Maths', 'Science', 'English', 'Hindi', 'Punjabi', 'Music'],
+  subjects: ['Maths', 'Science', 'English', 'Hindi'],
 }));
 
 const Header = () => {

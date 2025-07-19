@@ -87,8 +87,6 @@ const CareersPage = () => {
                   <li>• Science</li>
                   <li>• English</li>
                   <li>• Hindi</li>
-                  <li>• Punjabi</li>
-                  <li>• Music (Instruments)</li>
                 </ul>
               </Col>
               
