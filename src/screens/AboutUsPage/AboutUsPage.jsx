@@ -89,6 +89,7 @@ const AboutUsPage = () => {
         image={ctaFamily}
         primaryButtonText="Book Your Free Trial Class"
         primaryButtonIcon={<FaArrowRight />}
+        primaryButtonTextColor="black"
         secondaryButtonText="Contact Us to Learn More"
         secondaryButtonIcon={<FaArrowRight />}
       />
