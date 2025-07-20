@@ -1,5 +1,28 @@
 // src/data/subjectsData.js
 
+export const subjectOverviews = {
+  mathematics: {
+    pageTitle: "Mathematics",
+    description: "At TutorExel, we provide personalised online tutoring across a range of subjects to help your child build confidence and excel academically. Whether your child needs support in core academics, languages, or music, our qualified educators are here to guide them every step of the way.",
+    heading: "Explore Our Mathematics Curriculum by Year",
+  },
+  science: {
+    pageTitle: "Science",
+    description: "From biology to physics, our science curriculum is designed to spark curiosity and build a strong foundation for academic success. Explore our year-by-year programs tailored to the Australian curriculum.",
+    heading: "Explore Our Science Curriculum by Year",
+  },
+  english: {
+    pageTitle: "English",
+    description: "Our English programs focus on developing strong reading, writing, and comprehension skills, building confidence in communication for students at every level.",
+    heading: "Explore Our English Curriculum by Year",
+  },
+  hindi: {
+    pageTitle: "Hindi",
+    description: "Build a solid foundation in Hindi language, vocabulary, and literature with our dedicated tutors and structured learning plans.",
+    heading: "Explore Our Hindi Curriculum by Year",
+  }
+};
+
 export const subjectsData = {
   "year-1": {
     "maths": {

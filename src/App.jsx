@@ -12,6 +12,7 @@ import HomePage from './screens/HomePage/HomePage';
 import AboutUsPage from './screens/AboutUsPage/AboutUsPage';
 import CareersPage from './screens/CareersPage/CareersPage';
 import PricingPage from './screens/PricingPage/PricingPage';
+import SubjectOverviewPage from './screens/SubjectOverviewPage/SubjectOverviewPage';
 import SubjectPage from './screens/SubjectPage/SubjectPage';
 import StudentForm from './screens/ContactPage/StudentForm';
 import TeacherForm from './screens/ContactPage/TeacherForm';
@@ -27,6 +28,7 @@ function App() {
         <Route path="/about" element={<AboutUsPage />} />
         <Route path="/careers" element={<CareersPage />} />
         <Route path="/pricing" element={<PricingPage />} />
+        <Route path="/subjects/:subjectId" element={<SubjectOverviewPage />} />
         <Route path="/subjects/:yearId/:subjectId" element={<SubjectPage />} />
         <Route path="/contact" element={<StudentForm />} />
         <Route path="/contact/careers" element={<TeacherForm />} />

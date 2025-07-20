@@ -72,26 +72,25 @@ const subjectsData = [
         icon: iconMath,
         title: 'Mathematics',
         description: 'Build strong numeracy skills and master concepts aligned with the Australian curriculum.',
-    },
-    {
-        icon: iconMath,
-        title: 'Mathematics',
-        description: 'Build strong numeracy skills and master concepts aligned with the Australian curriculum.',
-    },
-    {
-        icon: iconMath,
-        title: 'Mathematics',
-        description: 'Build strong numeracy skills and master concepts aligned with the Australian curriculum.',
+        link: '/subjects/mathematics'
     },
     {
         icon: iconScience,
         title: 'Science',
-        description: 'Explore biology, chemistry, and physics with engaging lessons that spark curiosity'
+        description: 'Explore biology, chemistry, and physics with engaging lessons that spark curiosity',
+        link: '/subjects/science'
     },
     {
         icon: iconEnglish,
         title: 'English',
         description: 'Improve reading, writing, and comprehension confidence in communication.',
+        link: '/subjects/english'
+    },
+    {
+        icon: iconMath,
+        title: 'Hindi',
+        description: 'Build strong language skills and master concepts aligned with the Australian curriculum.',
+        link: '/subjects/hindi'
     },
 ];
 
@@ -155,6 +154,7 @@ const HomePage = () => {
                   icon={subject.icon}
                   title={subject.title}
                   description={subject.description}
+                  linkHref={subject.link}
                 />
               </Col>
             ))}

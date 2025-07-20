@@ -9,7 +9,7 @@ import PageHero from '../../components/ui/PageHero';
 import logo from '../../assets/images/logo.svg';
 import './TeacherForm.css';
 
-const subjectsOptions = ['Maths', 'Science', 'English', 'Hindi'];
+const subjectsOptions = ['Mathematics', 'Science', 'English', 'Hindi'];
 const yearGroupOptions = Array.from({ length: 10 }, (_, i) => `Year ${i + 1}`);
 
 const TeacherForm = () => {
