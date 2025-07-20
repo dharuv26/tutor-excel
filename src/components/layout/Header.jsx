@@ -8,8 +8,8 @@ import { FiSearch } from 'react-icons/fi';
 import { IoIosArrowDown } from 'react-icons/io';
 import './layout.css';
 
-const subjectsByYear = Array.from({ length: 10 }, (_, i) => ({
-  year: `Year ${i + 1}`,
+const subjectsByYear = Array.from({ length: 9 }, (_, i) => ({
+  year: `Year ${i + 2}`,
   subjects: ['Maths', 'Science', 'English', 'Hindi'],
 }));
 

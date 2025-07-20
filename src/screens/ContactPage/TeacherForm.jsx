@@ -10,7 +10,7 @@ import logo from '../../assets/images/logo.svg';
 import './TeacherForm.css';
 
 const subjectsOptions = ['Mathematics', 'Science', 'English', 'Hindi'];
-const yearGroupOptions = Array.from({ length: 10 }, (_, i) => `Year ${i + 1}`);
+const yearGroupOptions = Array.from({ length: 9 }, (_, i) => `Year ${i + 2}`);
 
 const TeacherForm = () => {
   const navigate = useNavigate();

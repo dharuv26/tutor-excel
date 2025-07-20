@@ -10,7 +10,7 @@ import './StudentForm.css'; // Import this page's CSS
 
 // Data for form options
 const subjectsOptions = ['Mathematics', 'Science', 'English', 'Hindi'];
-const yearGroupOptions = Array.from({ length: 10 }, (_, i) => `Year ${i + 1}`);
+const yearGroupOptions = Array.from({ length: 9 }, (_, i) => `Year ${i + 2}`);
 
 const StudentForm = () => {
   const navigate = useNavigate();
