@@ -28,9 +28,9 @@ const SubjectCard = ({
           {description}
         </Card.Text>
         {/* Use align-self-start to ensure the link aligns to the left in the flex container */}
-        <a href={linkHref} className="fw-semibold text-primary-blue text-decoration-none d-inline-flex align-items-center gap-2 mt-auto align-self-start">
+        <p className="fw-semibold text-primary-blue d-inline-flex align-items-center gap-2 mt-auto">
           {linkText} <FaArrowRight />
-        </a>
+        </p>
       </Card.Body>
     </Card>
   );

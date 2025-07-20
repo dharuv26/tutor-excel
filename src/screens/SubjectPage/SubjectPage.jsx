@@ -1,6 +1,6 @@
 // src/screens/SubjectPage/SubjectPage.jsx
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { subjectsData } from '../../data/subjectsData';
 import { Container, Row, Col, Button } from 'react-bootstrap';
@@ -14,6 +14,9 @@ import PageHero from '../../components/ui/PageHero';
 import FeatureSection from '../../components/ui/FeatureSection';
 
 const SubjectPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const { yearId, subjectId } = useParams();
   const subjectContent = subjectsData[yearId]?.[subjectId.toLowerCase()];
 

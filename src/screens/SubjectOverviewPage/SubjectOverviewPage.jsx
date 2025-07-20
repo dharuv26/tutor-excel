@@ -1,6 +1,6 @@
 // src/screens/SubjectOverviewPage/SubjectOverviewPage.jsx
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { FaArrowRight } from 'react-icons/fa';
@@ -14,6 +14,10 @@ import './SubjectOverviewPage.css';
 
 const SubjectOverviewPage = () => {
   const { subjectId } = useParams();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const subjectKeyMap = {
     mathematics: 'maths',

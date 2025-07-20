@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import { Container, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './HomePage.css';
 
 // --- Import all assets here ---
@@ -150,12 +151,13 @@ const HomePage = () => {
           <div className="horizontal-scroll-container">
             {subjectsData.map((subject, index) => (
               <Col md={5} lg={4} xl={3} key={index} className="flex-shrink-0">
-                <SubjectCard
-                  icon={subject.icon}
-                  title={subject.title}
-                  description={subject.description}
-                  linkHref={subject.link}
-                />
+                <Link to={subject.link} className="text-decoration-none d-block h-100">
+                  <SubjectCard
+                    icon={subject.icon}
+                    title={subject.title}
+                    description={subject.description}
+                  />
+                </Link>
               </Col>
             ))}
           </div>
