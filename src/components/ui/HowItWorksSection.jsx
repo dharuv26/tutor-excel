@@ -3,7 +3,8 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import arrowSeparator from '../../assets/icons/arrow-separator.svg';
+import arrowSeparatorDesktop from '../../assets/icons/arrow-separator.svg';
+import arrowSeparatorMobile from '../../assets/icons/arrow-separator-bottom.svg';
 
 /**
  * A reusable component for displaying a step-by-step process.
@@ -39,7 +40,7 @@ const HowItWorksSection = ({
             <h2 className="fw-bolder" style={{ fontSize: '2.8rem' }}>{headingText}</h2>
           </div>
           <div className="bg-white px-5 py-3 rounded-4 shadow-sm mt-5">
-          <Row className="mt-5 g-4 justify-content-between align-items-start">
+          <Row className="mt-5 g-4 justify-content-between align-items-center">
             {stepsData.map((step, index) => (
               <React.Fragment key={index}>
                 <Col lg={2} md={6} className="text-center">
@@ -55,8 +56,21 @@ const HowItWorksSection = ({
 
                 {/* Conditionally render the arrow icon if it's provided and not the last item */}
                 {index < stepsData.length - 1 && (
-                  <Col lg="auto" className="d-none d-lg-flex align-items-center" style={{ paddingTop: '40px' }}>
-                    <img src={arrowSeparator} alt="arrow separator" style={{ width: '32px' }} />
+                  <Col lg="auto" className="d-flex align-items-center justify-content-center">
+                    {/* Desktop arrow icon - visible on lg screens and up */}
+                    <img 
+                      src={arrowSeparatorDesktop} 
+                      alt="arrow separator desktop" 
+                      className="d-none d-lg-block"
+                      style={{ width: '32px' }} 
+                    />
+                    {/* Mobile arrow icon - visible on screens smaller than lg */}
+                    <img 
+                      src={arrowSeparatorMobile} 
+                      alt="arrow separator mobile" 
+                      className="d-block d-lg-none"
+                      style={{ width: '32px' }} 
+                    />
                   </Col>
                 )}
               </React.Fragment>

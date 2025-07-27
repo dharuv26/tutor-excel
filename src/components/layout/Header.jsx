@@ -1,10 +1,10 @@
 // src/components/layout/Header.jsx
 
 import React, { useState } from 'react';
-import { Navbar, Nav, Container, Button, Row, Col } from 'react-bootstrap';
+import { Navbar, Nav, Container, Button, Row, Col, Offcanvas } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/images/logo.svg';
-import { FiSearch } from 'react-icons/fi';
+import { FiSearch, FiMenu, FiX } from 'react-icons/fi';
 import { IoIosArrowDown } from 'react-icons/io';
 import './layout.css';
 
@@ -15,18 +15,36 @@ const subjectsByYear = Array.from({ length: 9 }, (_, i) => ({
 
 const Header = () => {
   const [showSubjects, setShowSubjects] = useState(false);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+  const handleCloseMobileMenu = () => setShowMobileMenu(false);
+  const handleShowMobileMenu = () => setShowMobileMenu(true);
 
   return (
     <>
       <div className="top-bar"></div>
-      <Navbar bg="white" expand="lg" className="shadow-sm p-0">
+      <Navbar bg="white" expand="lg" className="shadow-sm p-0 responsive-navbar">
         <Container>
-          <Navbar.Brand as={Link} to="/">
+          <Navbar.Brand as={Link} to="/" className="mobile-logo">
             <img src={logo} height="36" alt="TutorExel Logo" />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="main-navbar-nav" />
-          <Navbar.Collapse id="main-navbar-nav">
-            
+
+          {/* Mobile menu toggle button */}
+          <div className="d-lg-none mobile-nav-controls">
+            <Button variant="link" className="text-dark-navy me-2 p-1" href="#search">
+              <FiSearch size={20} />
+            </Button>
+            <Button 
+              variant="link" 
+              className="text-dark-navy p-1 mobile-menu-toggle"
+              onClick={handleShowMobileMenu}
+            >
+              <FiMenu size={24} />
+            </Button>
+          </div>
+
+          {/* Desktop Navigation */}
+          <Navbar.Collapse id="main-navbar-nav" className="d-none d-lg-flex">
             <Nav className="mx-auto nav-centered" onMouseLeave={() => setShowSubjects(false)}>
               <NavLink to="/" className="nav-link-base">Home</NavLink>
               <NavLink to="/about" className="nav-link-base">About Us</NavLink>
@@ -37,13 +55,11 @@ const Header = () => {
                 onMouseEnter={() => setShowSubjects(true)}
                 onClick={() => setShowSubjects(!showSubjects)}
               >
-                {/* This is the visible "Subjects" link */}
                 <div className="nav-link-base">
                   Subjects
                   <IoIosArrowDown className={`nav-arrow ${showSubjects ? 'open' : ''}`} />
                 </div>
                 
-                {/* This is the actual dropdown menu, shown conditionally */}
                 {showSubjects && (
                   <div className="subjects-mega-menu">
                     <Container>
@@ -69,16 +85,117 @@ const Header = () => {
               <NavLink to="/careers" className="nav-link-base">Careers</NavLink>
             </Nav>
 
-            <Nav className="align-items-center justify-content-end" style={{ gap: '2rem' }}>
-              <Nav.Link href="#search" className="text-dark-navy">
+            <Nav className="align-items-center justify-content-end desktop-nav-actions">
+              <Nav.Link href="#search" className="text-dark-navy me-3">
                 <FiSearch size={24} />
               </Nav.Link>
               <Button variant="secondary-blue" className="d-inline-flex align-items-center">
                 Free Trial
               </Button>
             </Nav>
-            
           </Navbar.Collapse>
+
+          {/* Mobile Offcanvas Menu */}
+          <Offcanvas 
+            show={showMobileMenu} 
+            onHide={handleCloseMobileMenu} 
+            placement="end"
+            className="mobile-offcanvas"
+          >
+            <Offcanvas.Header className="mobile-offcanvas-header">
+              <Offcanvas.Title>
+                <img src={logo} height="32" alt="TutorExel Logo" />
+              </Offcanvas.Title>
+              <Button 
+                variant="link" 
+                className="text-dark-navy p-0"
+                onClick={handleCloseMobileMenu}
+              >
+                <FiX size={24} />
+              </Button>
+            </Offcanvas.Header>
+            <Offcanvas.Body className="mobile-offcanvas-body">
+              <Nav className="flex-column mobile-nav">
+                <NavLink 
+                  to="/" 
+                  className="mobile-nav-link"
+                  onClick={handleCloseMobileMenu}
+                >
+                  Home
+                </NavLink>
+                <NavLink 
+                  to="/about" 
+                  className="mobile-nav-link"
+                  onClick={handleCloseMobileMenu}
+                >
+                  About Us
+                </NavLink>
+                
+                {/* Mobile Subjects Dropdown */}
+                <div className="mobile-subjects-section">
+                  <div 
+                    className="mobile-nav-link mobile-subjects-toggle"
+                    onClick={() => setShowSubjects(!showSubjects)}
+                  >
+                    Subjects
+                    <IoIosArrowDown className={`nav-arrow ${showSubjects ? 'open' : ''}`} />
+                  </div>
+                  
+                  {showSubjects && (
+                    <div className="mobile-subjects-menu">
+                      {subjectsByYear.slice(0, 4).map((yearGroup) => (
+                        <div key={yearGroup.year} className="mobile-year-group">
+                          <h6 className="mobile-year-title">{yearGroup.year}</h6>
+                          {yearGroup.subjects.map((subject) => (
+                            <Link 
+                              key={subject} 
+                              to={`/subjects/${yearGroup.year.replace(' ', '-').toLowerCase()}/${subject.toLowerCase()}`}
+                              className="mobile-subject-link"
+                              onClick={handleCloseMobileMenu}
+                            >
+                              {subject}
+                            </Link>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                <NavLink 
+                  to="/pricing" 
+                  className="mobile-nav-link"
+                  onClick={handleCloseMobileMenu}
+                >
+                  Pricing
+                </NavLink>
+                <NavLink 
+                  to="/contact" 
+                  className="mobile-nav-link"
+                  onClick={handleCloseMobileMenu}
+                >
+                  Contact Us
+                </NavLink>
+                <NavLink 
+                  to="/careers" 
+                  className="mobile-nav-link"
+                  onClick={handleCloseMobileMenu}
+                >
+                  Careers
+                </NavLink>
+                
+                <div className="mobile-cta-section">
+                  <Button 
+                    variant="secondary-blue" 
+                    className="w-100 mobile-cta-button"
+                    onClick={handleCloseMobileMenu}
+                  >
+                    Free Trial
+                  </Button>
+                </div>
+              </Nav>
+            </Offcanvas.Body>
+          </Offcanvas>
         </Container>
       </Navbar>
     </>
